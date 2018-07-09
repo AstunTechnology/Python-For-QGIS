@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+{% seo %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+          <ol>
+            <li><a href="./introduction">An Introduction to Python</a></li>
+            <li><a href="./introduction2">An Introduction to PyQGIS</a></li>
+            <li><a href="./expressions">Custom Python Expression Functions</a></li>
+<!--            <ol><li>Exercise <a
+                  href="https://astuntechnology.github.io/qgis-tutorials/html/en/docs/custom_python_functions.html">Using Custom Python Expression
+                  Functions</a></li></ol> -->
+            <li><a href="./console">Using the QGIS Python console</a></li>
+<!--            <ol><li>Exercise <a
+                  href="https://astuntechnology.github.io/qgis-tutorials/html/en/docs/getting_started_with_pyqgis.html">Getting
+                  Started With Python Programming</a></li></ol> -->
+            <li><a href="./exploring">Exploring the PyQGIS API</a></li>
+            <ol>
+              <li><a
+                  href="http://docs.qgis.org/2.18/en/docs/pyqgis_developer_cookbook/loadproject.html">Loading Projects</a></li>
+              <li><a
+                  href="http://docs.qgis.org/2.18/en/docs/pyqgis_developer_cookbook/loadlayer.html">Loading Layers</a></li>
+              <li><a
+                  href="http://docs.qgis.org/2.18/en/docs/pyqgis_developer_cookbook/vector.html">Using Vector Layers</a></li>
+              <li><a
+                  href="https://gist.github.com/walkermatt/28ec7a3cf3696a807405ce9a7d225f5e">Filter vector features</a></li>
+              <li><a
+                  href="https://gist.github.com/walkermatt/c1c1edcb807889c0eccb3844ace39e04">Vector layer summary</a></li>
+              <li><a
+                  href="http://docs.qgis.org/2.14/en/docs/pyqgis_developer_cookbook/geometry.html">Geometry Handling</a></li>
+              <li><a
+                  href="http://docs.qgis.org/2.14/en/docs/pyqgis_developer_cookbook/communicating.html#logging">Logging</a></li>
+            </ol>
+            <li>Plugins</li>
+            <ol>
+              <li><a
+                  href="https://astuntechnology.github.io/qgis-tutorials/html/en/docs/building_a_python_plugin.html">Creating a simple plugin</a></li>
+              <li><a
+                  href="https://astuntechnology.github.io/qgis-tutorials/html/en/docs/processing_python_scripts.html">Writing
+                  a processing plugin</a></li>
+            </ol>
+            <li><a href="./reference">Reference Materials</a></li>
+          </ol>
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+        <p><small>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.
+        Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+
+
+  {% if site.google_analytics %}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+  {% endif %}
+    <script>
+        // Try and highlight the current link in the menu
+        var links = document.querySelectorAll("header a");
+        for (var i = 0, link; i < links.length; i++) {
+            link = links[i];
+            if (link.href === window.location.href) {
+                link.classList.add('current');
+            }
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+}
+
+header {
+    width: 200px;
+}
+
+header li {
+    width: inherit;
+    float: none;
+    border-right: 0;
+    height: inherit;
+}
+
+section {
+    width: 680px;
+}
+
+a:hover, a:focus {
+    color: #0000FF;
+    font-weight: normal;
+}
+
+header a.current {
+    font-weight: bold;
+    color: #000;
+}
+
+@media print, screen and (max-width: 960px) {
+
+section {
+    width: 100%;
+}
+
+}
