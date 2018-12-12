@@ -6,3 +6,4 @@ introduction/refresher on python is provided in the
 [introduction](./introduction).
 
 
+> Short link for this page: [https://bit.ly/python-qgis](https://bit.ly/python-qgis).
