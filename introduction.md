@@ -90,12 +90,12 @@ def repeat(s, exclaim):
 Notice also how the lines that make up the function or if-statement are
 grouped by all having the same level of indentation. We also presented 2
 different ways to repeat strings, using the + operator which is more
-user-friendly, but \* also works because it's Python's "repeat"
+user-friendly, but `*` also works because it's Python's "repeat"
 operator, meaning that `'-' * 10` gives `'----------'`, a neat way to
-create an onscreen "line." In the code comment, we hinted that \* works
-faster than +, the reason being that \* calculates the size of the
-resulting object once whereas with +, that calculation is made each time `+`
-is called. Both + and \* are called "overloaded" operators because
+create an onscreen "line." In the code comment, we hinted that `*` works
+faster than +, the reason being that `*` calculates the size of the
+resulting object once whereas with `+`, that calculation is made each time `+`
+is called. Both `+` and `*` are called "overloaded" operators because
 they mean different things for numbers vs. for strings (and other data
 types).
 
@@ -113,8 +113,8 @@ Here is code that calls the above repeat() function, printing what it
 returns:
 
 ```python
-print repeat('Yay', False)
-print repeat('Woo Hoo', True)
+print(repeat('Yay', False))
+print(repeat('Woo Hoo', True))
 ```
 
 At run time, functions must be defined by the execution of a "def"
@@ -149,9 +149,9 @@ type, name, etc. checks on each line until that line runs.
 
 ```python
 if name == 'Guido':
-    print repeeeet(name) + '!!!'
+    print(repeeeet(name) + '!!!')
 else:
-    print repeat(name, False)
+    print(repeat(name, False))
 ```
 
 The if-statement contains an obvious error, where the `repeat()` function
@@ -206,8 +206,8 @@ import sys
 sys.version
 ```
 
-There is another import form that looks like this: "from sys import
-version". That makes version available as `version` without the module prefix;
+There is another import form that looks like this: "`from sys import
+version`". That makes version available as `version` without the module prefix;
 however, we recommend the original form with the fully-qualified names
 because it's a lot easier to determine where a function or attribute
 came from.
@@ -222,7 +222,7 @@ Library." Commonly used modules/packages include:
 -   `os` — operating system interface, file system
 
 You can find the documentation of all the Standard Library modules and
-packages at <https://docs.python.org/2.7/library/>.
+packages at <https://docs.python.org/3/library/>.
 
 Online help, help(), and dir()
 ----------------------------------
@@ -243,13 +243,13 @@ There are a variety of ways to get help for Python.
 -   Many questions (and answers) can be found on
     [StackOverflow](http://stackoverflow.com/questions/tagged/python)
     and [Quora](http://quora.com/Python-programming-language).
--   Use the help() and dir() functions (see below).
+-   Use the `help()` and `dir()` functions (see below).
 
-Inside the Python interpreter, the help() function pulls up
+Inside the Python interpreter, the `help()` function pulls up
 documentation strings for various modules, functions, and methods. These
-doc strings are similar to Java's javadoc. The dir() function tells you
-what the attributes of an object are. Below are some ways to call help()
-and dir() from the interpreter:
+doc strings are similar to Java's javadoc. The `dir()` function tells you
+what the attributes of an object are. Below are some ways to call `help()`
+and `dir()` from the interpreter:
 
 -   `help(len)` — help string for the built-in `len()` function; note
     that it's "len" not "len()", which is a **call** to the function,
@@ -276,5 +276,4 @@ Except as otherwise noted, the content of this page is licensed under
 the [Creative Commons Attribution 3.0
 License](http://creativecommons.org/licenses/by/3.0/), and code samples
 are licensed under the [Apache 2.0
-License](http://www.apache.org/licenses/LICENSE-2.0). For details, see
-our [Site Policies](https://developers.google.com/terms/site-policies).
+License](http://www.apache.org/licenses/LICENSE-2.0). 

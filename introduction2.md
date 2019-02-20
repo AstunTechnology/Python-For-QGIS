@@ -12,3 +12,4 @@ already have a working installation of Python on your system. All you need to
 get started is to launch QGIS and open the Python console (Plugins | Python
 console).
 
+[![QGIS Console](/images/start/4.png)](/images/start/4.png)
