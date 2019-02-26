@@ -74,9 +74,9 @@ Procedure
     from qgis.core import *
     from qgis.gui import *
 
-    @qgsfunction(args=0, group='Custom')
+    @qgsfunction(args=0, group='Custom', usesgeometry=True)
     def GetUtmZone(value1, feature, parent):
-        """Return the UTM Zone of the features geometry as a String"""
+        """Return the UTM Zone of the feature's geometry as a String"""
         centroid = feature.geometry()
         longitude = centroid.asPoint().x()
         latitude = centroid.asPoint().y()
@@ -101,7 +101,7 @@ Procedure
     Click `Zoom to Features` and the map will change, if you click `Select
     Features` you should see the points in UTM zone 40N change colour to yellow.
     However, due to a [current
-    issue](https://gis.stackexchange.com/questions/312782/custom-function-works-in-zoom-to-features-but-not-select-features) in QGIS3.4 this isn't working!
+    issue](https://gis.stackexchange.com/questions/312782/custom-function-works-in-zoom-to-features-but-not-select-features) in QGIS3.4.4 this isn't working! However it will work in the next release.
 
     ```
     GetUtmZone() = '40N'
