@@ -48,14 +48,14 @@ Procedure
     and it's 3 digit code are contained in the attributes `name` and
     `iata_code` respectively.
 
-    [![image](/images/start/3.png)](/images/start/3.png)
+    [![image](images/start/3.png)](images/start/3.png)
 
 4.  QGIS provides a built-in console where you can type python commands
     and get the result. This console is a great way to learn scripting
     and also to do quick data processing. Open the Python Console by
     going to Plugins --&gt; Python Console.
 
-    [![image](/images/start/4.png)](/images/start/4.png)
+    [![image](images/start/4.png)](images/start/4.png)
 
 5.  You will see a new panel open at the bottom of QGIS canvas. You will
     see a prompt like `>>>` at the bottom where you can type commands.
@@ -67,7 +67,7 @@ Procedure
     ```python
       layer = iface.activeLayer()
     ```
-    [![image](/images/start/5.png)](/images/start/5.png)
+    [![image](images/start/5.png)](images/start/5.png)
 
 1.  There is a handy function called `dir()` in python that shows you
     all available methods for any object. This is useful when you are
@@ -79,7 +79,7 @@ Procedure
     dir(layer)
     ```
 
-    [![image](/images/start/6.png)](/images/start/6.png)
+    [![image](images/start/6.png)](images/start/6.png)
 
 7.  You will see a long list of available functions. For now, we will
     use a function called `getFeatures()` which will gets you the
@@ -93,7 +93,7 @@ Procedure
       print(f)
     ```
 
-    [![image](/images/start/7.png)](/images/start/7.png)
+    [![image](images/start/7.png)](images/start/7.png)
 
 8.  As you will see in the output, each line contains a reference to a
     feature within the layer. The reference to the feature is stored in
@@ -106,7 +106,7 @@ Procedure
       print(f"{f['name']}, {f['iata_code']}")
     ```
 
-    [![image](/images/start/8.png)](/images/start/8.png)
+    [![image](images/start/8.png)](images/start/8.png)
 
 9.  So now you know how to programatically access the attribute of each
     feature in a layer. Now, let's see how we can access the coordinates
@@ -125,7 +125,7 @@ Procedure
       print(geom.asPoint())
     ```
 
-    [![image](/images/start/9.png)](/images/start/9.png)
+    [![image](images/start/9.png)](images/start/9.png)
 
 10. What if we wanted to get only the `x` cordinate of the feature? You
     can call the `x()` function on the point object and get its x
@@ -137,7 +137,7 @@ Procedure
       print(geom.asPoint().x())
     ```
 
-    [![image](/images/start/10.png)](/images/start/10.png)
+    [![image](images/start/10.png)](images/start/10.png)
 
 11. Now we have all the pieces that we can stitch together to generate
     our desired output. Type the following code to print the name,
@@ -152,7 +152,7 @@ Procedure
 
     ```
 
-    [![image](/images/start/11.png)](/images/start/11.png)
+    [![image](images/start/11.png)](images/start/11.png)
 
 12. You can see the output printed on the console. A more useful way to
     store the output would be in a file. You can type the following code
@@ -171,10 +171,10 @@ Procedure
 
     ```
 
-    [![image](/images/start/12.png)](/images/start/12.png)
+    [![image](images/start/12.png)](images/start/12.png)
 
 13. You can go to the output file location you specified and open the
     text file. You will see the data from the airports shapefile that we
     extracted using python scripting.
 
-    [![image](/images/start/13.png)](/images/start/13.png)
+    [![image](images/start/13.png)](images/start/13.png)
