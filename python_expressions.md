@@ -39,16 +39,16 @@ Procedure
     Layer. Or browse to the downloaded `ne_10m_populated_places_simple.zip` file
     and drag it into the map window.
 
-    [![image](/images/func/2.png)](/images/func/2.png)
+    [![image](images/func/2.png)](images/func/2.png)
 
 1.  Go to View --&gt; Select --&gt; Select By Expressions.... or click the icon:
 
-    [![image](/images/func/3.png)](/images/func/3.png)
+    [![image](images/func/3.png)](images/func/3.png)
 
 1.  Switch to the Function Editor tab. Here you can write any PyQGIS
     code that will be executed by the expression engine.
 
-    [![image](/images/func/4.png)](/images/func/4.png)
+    [![image](images/func/4.png)](images/func/4.png)
 
 1.  We will define a custom function named `GetUtmZone` that will
     calculate the UTM zone number for each feature. Since custom
@@ -90,7 +90,7 @@ Procedure
         return '%d%s' % (int(zone_number), zone_letter)
     ```
 
-    [![image](/images/func/5.png)](/images/func/5.png)
+    [![image](images/func/5.png)](images/func/5.png)
 
 1.  Switch to the Expression tab in the Select by
     expression dialog. Find and expand the Custom group in the Functions
@@ -105,13 +105,13 @@ Procedure
     GetUtmZone() = '40N'
     ```
 
-    [![image](/images/func/7.png)](/images/func/7.png)
+    [![image](images/func/7.png)](images/func/7.png)
 
 8.  Back in the main QGIS window, you should see many points highlighted
     in yellow. These are the points falling in the UTM Zone we specified
     in the expression. But you can see we have zoomed in to the UTM zone.
 
-    [![image](/images/func/8.png)](/images/func/8.png)
+    [![image](images/func/8.png)](images/func/8.png)
 
 9.  You saw how we defined and used a custom function to select features
     by expression. We will now use the same function in another context.
@@ -119,7 +119,7 @@ Procedure
     shows user-defined text when you hover over a feature. Right-click
     the `ne_10m_populated_places_simple` layer and select Properties.
 
-    [![image](/images/func/9.png)](/images/func/9.png)
+    [![image](images/func/9.png)](images/func/9.png)
 
 10. Switch to the Display tab. Here you can enter any
     text that will be displayed when you hover over the features of the
@@ -135,27 +135,27 @@ Procedure
     concat("name",'|UTM Zone: ',GetUtmZone())
     ```
 
-    [![image](/images/func/11.png)](/images/func/11.png)
+    [![image](images/func/11.png)](images/func/11.png)
 
 12. You will see the expression entered as the value of the Display
     text. Click `Insert` to add it to the HTML box and then press `OK`.
 
-    [![image](/images/func/12.png)](/images/func/12.png)
+    [![image](images/func/12.png)](images/func/12.png)
 
 13. Before we proceed, let us de-select the features that were selected
     in the previous step. Go to
     View --&gt; Select --&gt; Deselect Features
     from All Layers.
 
-    [![image](/images/func/13.png)](/images/func/13.png)
+    [![image](images/func/13.png)](images/func/13.png)
 
 14. Activate the `Map Tips` tool by going to View --&gt; Map
     Tips.
 
-    [![image](/images/func/14.png)](/images/func/14.png)
+    [![image](images/func/14.png)](images/func/14.png)
 
 15. Zoom into any area of the map and put your mouse cursor over any
     feature. You will see the name of the city and corresponding UTM
     zone displayed as the map tip.
 
-    [![image](/images/func/15.png)](/images/func/15.png)
+    [![image](images/func/15.png)](images/func/15.png)
