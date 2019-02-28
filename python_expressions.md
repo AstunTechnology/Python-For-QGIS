@@ -100,8 +100,6 @@ Procedure
     expression will select all points that fall in the UTM Zone `40N`.
     Click `Zoom to Features` and the map will change, if you click `Select
     Features` you should see the points in UTM zone 40N change colour to yellow.
-    However, due to a [current
-    issue](https://gis.stackexchange.com/questions/312782/custom-function-works-in-zoom-to-features-but-not-select-features) in QGIS3.4.4 this isn't working! However it will work in the next release.
 
     ```
     GetUtmZone() = '40N'
