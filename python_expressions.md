@@ -9,7 +9,7 @@ within the expression engine.
 
 This tutorial is based on ["QGIS Tutorials and Tips
 v1.0"](https://www.qgistutorials.com/en/) by Ujaval Gandhi, updated to
-use Python 3 and QGis 3 by Ian Turton.
+use Python 3 and QGIS 3 by Ian Turton.
 
 
 Overview of the task
@@ -77,7 +77,7 @@ Procedure
     @qgsfunction(args=0, group='Custom', usesgeometry=True)
     def GetUtmZone(value1, feature, parent):
         """Return the UTM Zone of the feature's geometry as a String"""
-        centroid = feature.geometry()
+        centroid = feature.geometry().centroid()
         longitude = centroid.asPoint().x()
         latitude = centroid.asPoint().y()
         zone_number = math.floor(((longitude + 180) / 6) % 60) + 1
@@ -87,7 +87,7 @@ Procedure
         else:
             zone_letter = 'S'
 
-        return '%d%s' % (int(zone_number), zone_letter)
+        return f"{int(zone_number)}{zone_letter}"
     ```
 
     [![image](images/func/5.png)](images/func/5.png)
