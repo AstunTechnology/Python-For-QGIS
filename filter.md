@@ -29,4 +29,13 @@ layer = iface.activeLayer()
 for feature in layer.getFeatures(request):
     print(feature['name'])
 
+# If you need to use a ' in your query double it
+
+exp = QgsExpression("\"name\" like '%Int''l'")
+request = QgsFeatureRequest(exp)
+layer = iface.activeLayer()
+for feature in layer.getFeatures(request):
+    print(feature['name'])
 ```
+
+

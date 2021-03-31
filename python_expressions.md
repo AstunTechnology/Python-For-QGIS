@@ -68,13 +68,19 @@ Procedure
     >UTM zone is 6 degree wide. Here we use a simple mathematical formula to
     >find the appropriate zone for a given longitude value. Note that this
     >formula doesn't cover some special UTM zones.
+    >
+    > `math.floor()` returns the integer value nearest 0 of a double.
+    > We add `180` to the `longitude` so that the zone number starts at `0` and divide it
+    > by `6` to find the relevant zone number. The `% 60` is so that longitudes `<-180` 
+    > or ``>180` still give the right answer by taking the remainder after dividing by
+    > `60`.
 
     ```python
     import math
     from qgis.core import *
     from qgis.gui import *
 
-    @qgsfunction(args=0, group='Custom', usesgeometry=True)
+    @qgsfunction(args='auto', group='Custom', usesgeometry=True)
     def GetUtmZone(value1, feature, parent):
         """Return the UTM Zone of the feature's geometry as a String"""
         centroid = feature.geometry().centroid()
