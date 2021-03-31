@@ -72,7 +72,7 @@ Procedure
     > `math.floor()` returns the integer value nearest 0 of a double.
     > We add `180` to the `longitude` so that the zone number starts at `0` and divide it
     > by `6` to find the relevant zone number. The `% 60` is so that longitudes `<-180` 
-    > or ``>180` still give the right answer by taking the remainder after dividing by
+    > or `>180` still give the right answer by taking the remainder after dividing by
     > `60`.
 
     ```python
